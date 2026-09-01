@@ -45,7 +45,7 @@ scheduler_visualization.csv
 ## Build & Run
 
 ```bash
-gcc -std=c11 -o scheduler task_queue.c scheduler_simulations.c performance_metrics.c os_executor.c scheduler_tool.c
+gcc -std=c11 -o scheduler task_queue.c scheduler_simulations.c performance.c os_execute.c scheduler_tool.c
 ./scheduler
 ```
 
