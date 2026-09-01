@@ -29,16 +29,19 @@ Scheduling theory says SJF minimizes average wait time and Round Robin is fair b
 ---
 
 ## Architecture
-task_queue.c → Task struct, singly linked list queue (O(1) enqueue/dequeue), synthetic task generation
+## Architecture
+
+​```
+task_queue.c            → Task struct, singly linked list queue (O(1) enqueue/dequeue), synthetic task generation
 scheduler_simulations.c → SJF / Priority / Round Robin simulations, event trace logging
-performance_metrics.c → Turnaround time, waiting time, CPU utilization calculations + formatted reporting
-os_executor.c → Real process execution: fork/waitpid, CPU affinity, SCHED_FIFO, context-switch tracking via /proc
-scheduler_tool.c → Unified entry point — runs all simulated policies + the real OS executor, writes standardized output
-│
-▼
+performance_metrics.c   → Turnaround time, waiting time, CPU utilization calculations + formatted reporting
+os_executor.c            → Real process execution: fork/waitpid, CPU affinity, SCHED_FIFO, context-switch tracking via /proc
+scheduler_tool.c         → Unified entry point — runs all simulated policies + the real OS executor, writes standardized output
+        │
+        ▼
 scheduler_visualization.csv
 (timestamp, task_id, policy_name, event_type, cpu_time_used, context_switches_so_far)
-
+​```
 
 ---
 
