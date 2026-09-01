@@ -1,13 +1,13 @@
 timestamp,task_id,policy_name,event_type,cpu_time_used,context_switches_so_far
 0,1,REAL_OS,START,0,0
 timestamp,task_id,policy_name,event_type,cpu_time_used,context_switches_so_far
-timestamp,task_id,policy_name,event_type,cpu_time_used,context_switches_so_far
 0,1,REAL_OS,START,0,0
 0,2,REAL_OS,START,0,0
+timestamp,task_id,policy_name,event_type,cpu_time_used,context_switches_so_far
 timestamp,task_id,policy_name,event_type,cpu_time_used,context_switches_so_far
 0,1,REAL_OS,START,0,0
 0,2,REAL_OS,START,0,0
 0,3,REAL_OS,START,0,0
-1,1,REAL_OS,COMPLETE,1,951
-1,2,REAL_OS,COMPLETE,1,1885
-1,3,REAL_OS,COMPLETE,1,2775
+1,1,REAL_OS,COMPLETE,1,2752
+1,2,REAL_OS,COMPLETE,1,5398
+1,3,REAL_OS,COMPLETE,1,8178
