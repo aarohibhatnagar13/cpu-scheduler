@@ -18,7 +18,6 @@ An implementation of classical CPU scheduling algorithms, benchmarked against re
 - Real context-switch counts (voluntary/non-voluntary) extracted by parsing `/proc/[pid]/status`, with a `getrusage()` fallback on macOS
 - Cross-platform via `#ifdef __linux__` — compiles cleanly on macOS, enables kernel-level features on Linux
 
-Both paths write to a common CSV schema, so simulated scheduler behavior can be directly compared against real OS execution.
 
 ---
 
