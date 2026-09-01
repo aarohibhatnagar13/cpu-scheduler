@@ -1,17 +1,17 @@
 # CPU Scheduler & Real-OS Executor
 
-A C11 implementation of classical CPU scheduling algorithms, benchmarked against real OS-level process execution on Linux — comparing theoretical scheduling behavior to what the kernel actually does.
+An implementation of classical CPU scheduling algorithms, benchmarked against real OS-level process execution on Linux comparing theoretical scheduling behavior to what the kernel actually does.
 
 ---
 
 ## What This Does
 
-**Simulated Scheduling Engines** — three classical scheduling policies run over a custom task queue:
+**Simulated Scheduling Engines** — Three classical scheduling policies run over a custom task queue:
 - SJF (Shortest Job First, non-preemptive)
 - Priority Scheduling (non-preemptive)
 - Round Robin (preemptive, time quantum = 2)
 
-**Real OS Executor** — tasks are also run as actual OS processes, not just simulated:
+**Real OS Executor** — Tasks are also run as actual OS processes, not just simulated:
 - Spawned via `fork()`, synchronized with `waitpid()`
 - Pinned to CPU Core 0 via `sched_setaffinity()` (Linux) to eliminate multi-core cache migration noise
 - Escalated to real-time scheduling via `sched_setscheduler()` with `SCHED_FIFO` (Linux)
@@ -24,7 +24,7 @@ Both paths write to a common CSV schema, so simulated scheduler behavior can be 
 
 ## Why
 
-Scheduling theory says SJF minimizes average wait time and Round Robin is fair — but theory doesn't tell you how many *real* context switches Round Robin causes on an actual core, or whether pinning a process to a core actually changes its behavior versus letting the Linux scheduler decide freely. This project was built to answer that with real measurements instead of assumptions.
+Scheduling theory says SJF minimizes average wait time and Round Robin is fair but theory doesn't tell us how many *real* context switches Round Robin causes on an actual core or whether pinning a process to a core actually changes its behavior versus letting the Linux scheduler decide freely. This project was built to answer that with real measurements instead of assumptions.
 
 ---
 
@@ -57,4 +57,4 @@ Requires Linux for full functionality (`sched_setaffinity`, `SCHED_FIFO`, `/proc
 
 ## Notes
 
-- Built to explore the gap between theoretical scheduling algorithms and real Linux kernel scheduling behavior — process management, CPU affinity, real-time priority classes, and context-switch overhead.
+- Built to explore the gap between theoretical scheduling algorithms and real Linux kernel scheduling behavior like process management, CPU affinity, real-time priority classes, and context-switch overhead.
