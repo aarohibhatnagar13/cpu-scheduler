@@ -1,0 +1,11 @@
+# Compile target/executable
+phase1
+*.exe
+*.o
+*.out
+
+# macOS system files
+.DS_Store
+
+# VS Code workspace settings
+.vscode/
