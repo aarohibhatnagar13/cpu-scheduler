@@ -6,7 +6,7 @@ An implementation of classical CPU scheduling algorithms, benchmarked against re
 
 ## What This Does
 
-**Simulated Scheduling Engines** — Three classical scheduling policies run over a custom task queue:
+**Simulated Scheduling Engines** — Some classical scheduling policies run over a custom task queue:
 - SJF (Shortest Job First, non-preemptive)
 - Priority Scheduling (non-preemptive)
 - Round Robin (preemptive, time quantum = 2)
